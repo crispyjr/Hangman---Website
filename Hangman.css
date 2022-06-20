@@ -3,6 +3,7 @@ body {
     padding:0px;
     margin:0px;
 }
+/*==============================================GAME BOARD=========================================================*/
 
 .gameBoard{
     width: 400px;
@@ -13,14 +14,6 @@ body {
     position: absolute;
 }
 
-.guessBoard{
-    width:300px;
-    height: 400px;
-    background-color: magenta;
-    position: absolute;
-    margin-left: 700px;
-    margin-top: 100px;
-}
 
 #bottomLine{
     width: 80%;
@@ -115,4 +108,95 @@ border-width: 2px;
     background-color: black;
     position: absolute;
     transform: rotate(-40deg);
+}
+.wordPanel{
+    height: 100px;
+    width: 300px;
+    background-color: blueviolet;
+    bottom: 0;
+    position: absolute;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+#guessCorrectWord{
+    text-align: center;
+}
+#lineBox{
+    width:32px;
+    height:32px;
+    float: left;
+    position: relative;
+    background-color: blueviolet;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: black;
+    text-align: center;
+    margin-left: 5px;
+}
+#bottomLineBox{
+    
+}
+#gapLine{
+    width:32px;
+    height:32px;
+    float: left;
+    position: relative;
+    background-color: beige;
+}
+/*==============================================GUESS BOARD / PLAYER BOARD=========================================================*/
+.guessBoard{
+    width:300px;
+    height: 400px;
+    background-color: magenta;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 100px;
+}
+
+.guessPanel{
+    width:100%;
+    height: 60px;
+    background-color: azure;
+    position: absolute;
+    bottom: 0%;
+}
+#guessWordTextBox{
+    width:70%;
+    height:25px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#guessButton{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    margin-top: 10px;
+    right: 10px;
+}
+.playerPanel{
+    width:100%;
+    height:100px;
+    position: absolute;
+    background-color: blue;
+}
+.playerOnePanel{
+    width: 100px;
+    height:100%;
+    background-color: yellow;
+    position: relative;
+    float: left;
+
+}
+.playerTwoPanel{
+
+}
+.playerThreePanel{
+    
+}
+.chatPanel{
+    width: 100%;
+    margin-top: 100px;
+    height:240px;
+    background-color: rebeccapurple;
 }

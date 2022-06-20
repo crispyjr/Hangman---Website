@@ -9,20 +9,44 @@
 <body>
 
     <div class="gameBoard">
-        <div id="bottomLine"></div>
-        <div id="pillarLine"></div>
-        <div id="topLine"></div>
-        <div id="hangingLine"></div>
+        <span id="bottomLine"></span>
+        <span id="pillarLine"></span>
+        <span id="topLine"></span>
+        <span id="hangingLine"></span> 
         <span id="head"></span>
         <span id="connectBody"></span>
         <span id="leftArm"></span>
         <span id="rightArm"></span>
         <span id="leftLeg"></span>
         <span id="rightLeg"></span>
+        <div class="wordPanel">
+            
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+            <div id="lineBox">m</div>
+
+        </div>
     </div>
 
     <div class="guessBoard">
-        <div></div>
+        <div class="playerPanel">
+            <div class="playerOnePanel"></div>
+            <div class="playerOnePanel" style="background-color:white;"></div>
+            <div class="playerOnePanel" style="background-color:black;"></div>
+
+        </div>
+        <div class="chatPanel"></div>
+        <div class="guessPanel">
+            <input type="text" id="guessWordTextBox">
+            <button type="button" id="guessButton">Guess</button>
+
+        </div>
+        
     </div>
 
 </body>
