@@ -123,7 +123,7 @@ border-width: 2px;
 #guessCorrectWord{
     text-align: center;
 }
-#lineBox{
+.lineBox{
     width:32px;
     height:32px;
     float: left;
@@ -216,7 +216,7 @@ border-width: 2px;
     background-color: antiquewhite;
     position: absolute;
 }
-#letterButton{
+.letterButton{
     width:45px;
     height:40px;
     position: relative;
@@ -227,6 +227,8 @@ border-width: 2px;
     border-color: black;
     text-transform: capitalize;
     background-color: white;
+    font-family: cursive;
+    font-size: large;
 }
 #horizontalLineInGuess{
     width: 100%;
