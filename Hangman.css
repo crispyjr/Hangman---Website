@@ -8,10 +8,13 @@ body {
 .gameBoard{
     width: 400px;
     height: 400px;
-    background-color: aquamarine;
-    margin-left: 300px;
+    background-color: antiquewhite;
+    margin-left: 298px;
     margin-top: 100px;
     position: absolute;
+    border-right: 2px;
+    border-right-style: solid;
+    border-color: black;
 }
 
 
@@ -111,11 +114,10 @@ border-width: 2px;
 }
 .wordPanel{
     height: 100px;
-    width: 300px;
-    background-color: blueviolet;
+    width: 380px;
     bottom: 0;
     position: absolute;
-    margin-left: 50px;
+    margin-left: 10px;
     margin-bottom: 20px;
 }
 #guessCorrectWord{
@@ -126,16 +128,18 @@ border-width: 2px;
     height:32px;
     float: left;
     position: relative;
-    background-color: blueviolet;
     border-bottom: 2px;
     border-bottom-style: solid;
     border-color: black;
     text-align: center;
     margin-left: 5px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 40px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
 }
-#bottomLineBox{
-    
-}
+
 #gapLine{
     width:32px;
     height:32px;
@@ -151,29 +155,9 @@ border-width: 2px;
     position: absolute;
     margin-left: 700px;
     margin-top: 100px;
+   
 }
-
-.guessPanel{
-    width:100%;
-    height: 60px;
-    background-color: azure;
-    position: absolute;
-    bottom: 0%;
-}
-#guessWordTextBox{
-    width:70%;
-    height:25px;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-#guessButton{
-    width: 50px;
-    height: 30px;
-    position: absolute;
-    margin-top: 10px;
-    right: 10px;
-}
+/*Player Panel*/
 .playerPanel{
     width:100%;
     height:100px;
@@ -188,15 +172,76 @@ border-width: 2px;
     float: left;
 
 }
-.playerTwoPanel{
+/*Guess panel*/
+.guessPanel{
+    width: 100%;
+    height:400px;
+    background-color: black;
+    position: absolute;
 
 }
-.playerThreePanel{
-    
+.guessWordPanel{
+    width:100%;
+    height: 50px;
+    background-color: antiquewhite;
+    position: absolute;
+    margin-top: 20px;
+    bottom: 0%;
+
 }
+#guessWordTextBox{
+    width:70%;
+    height:25px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-color: black;
+    border-width: 1px;
+}
+#guessButton{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    margin-top: 10px;
+    right: 15px;
+    border-color: black;
+    border-width: 1px;
+    background-color: antiquewhite;
+    font-family:cursive;
+}
+.guessButtonsPanel{
+    margin-top: 20px;
+    width:100%;
+    height:310px;
+    background-color: antiquewhite;
+    position: absolute;
+}
+#letterButton{
+    width:45px;
+    height:40px;
+    position: relative;
+    float: left;
+    margin-left:12px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: black;
+    text-transform: capitalize;
+    background-color: white;
+}
+#horizontalLineInGuess{
+    width: 100%;
+    height:2px;
+    background-color: antiquewhite;
+    position: absolute;
+}
+
+/*Chat Panel*/
 .chatPanel{
     width: 100%;
     margin-top: 100px;
-    height:240px;
-    background-color: rebeccapurple;
+    height:300px;
+    background-color: rosybrown;
+    position: absolute;
+    visibility: hidden;
+
 }
