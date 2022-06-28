@@ -64,6 +64,7 @@ border-width: 2px;
   position: absolute;
   margin-top: 80px;
   margin-left: 160px;
+  visibility: hidden;
 }
 #connectBody{
     height:60px;
@@ -72,6 +73,7 @@ border-width: 2px;
     background-color: black;
     margin-top: 129px;
     margin-left: 182px;
+    visibility: hidden;
 }
 
 #leftArm{
@@ -82,6 +84,7 @@ border-width: 2px;
     background-color: black;
     position: absolute;
     transform: rotate(40deg);
+    visibility: hidden;
 }
 
 #rightArm{
@@ -92,6 +95,7 @@ border-width: 2px;
     background-color: black;
     position: absolute;
     transform: rotate(-40deg);
+    visibility: hidden;
 }
 
 #leftLeg{
@@ -102,6 +106,7 @@ border-width: 2px;
     background-color: black;
     position: absolute;
     transform: rotate(40deg);
+    visibility: hidden;
 }
 #rightLeg{
     height: 40px;
@@ -111,6 +116,7 @@ border-width: 2px;
     background-color: black;
     position: absolute;
     transform: rotate(-40deg);
+    visibility: hidden;
 }
 .wordPanel{
     height: 100px;

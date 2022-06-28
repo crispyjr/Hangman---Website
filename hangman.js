@@ -24,12 +24,19 @@
 //pos 1,2,3,4,5,6 and 8,9
 //basically if there is enough space, they both can be on top. 
 
-let tempword = "responssse";
+let tempword = "pool";
 const wordSplit = tempword.split("");
 let position = document.getElementsByClassName("lineBox")[3];
 let startPosition= 0;
+let wrongCounter = 0;
+
+
 function showPosition(){
-    if(tempword.length==5){
+    if(tempword.length==4){
+        startPosition=3;
+        console.log("hit 4");
+    }
+    else if(tempword.length==5){
         startPosition=2;
         //document.getElementsByClassName("lineBox")[3].style.visibility="visible";
         console.log("hit 5");
@@ -59,12 +66,13 @@ function showPosition(){
     else{
         startPosition=0;
     }
-    console.log(startPosition);
+    //console.log(startPosition);
     showLines(startPosition);
 
     
 }
 
+//show lines
 function showLines(n){
     for(let i=n;i<tempword.length+n;i++){
         document.getElementsByClassName("lineBox")[i].style.visibility="visible";
@@ -79,11 +87,57 @@ function touchLetterButton(x){
 
 //check if the letter is there
 function checkLetter(x){
+    let correct=false;
     for(let i=0;i<tempword.length;i++){
         if(x.innerText.toUpperCase() == wordSplit[i].toUpperCase()){
+            correct=true;
+            document.getElementsByClassName("lineBox")[startPosition+i].innerText = wordSplit[i];
+        }
+    }
+    if(correct!=true){
+        showBodyParts();
+    }
+    //console.log(x.innerText.toUpperCase() == wordSplit[0].toUpperCase());
+}
+//show the hangman parts per incorrect choice
+function showBodyParts(){
+    document.getElementsByClassName("body")[wrongCounter++].style.visibility = "visible";
+    if(wrongCounter>=6){
+        roundOver();
+    }
+    console.log(wrongCounter)
+}
+
+//guess textbox
+function guessWordCheck(){
+    let guess = document.getElementById("guessWordTextBox");
+    if(guess.value.toUpperCase() == tempword.toUpperCase()){
+        guess.value = "";
+        console.log("win");
+        showAllLetters();
+        roundOver();
+    }
+    else{
+        guess.value="";
+    }
+}
+//if you guess word, and its true, show all the letters
+function showAllLetters(){
+    for(let i=0;i<tempword.length;i++){
         document.getElementsByClassName("lineBox")[startPosition+i].innerText = wordSplit[i];
     }
-    }
-    
-    console.log(x.innerText.toUpperCase() == wordSplit[0].toUpperCase());
+
 }
+//disable everything 
+function roundOver(){
+    document.getElementById("guessWordTextBox").disabled = true;
+    document.getElementById("guessButton").disabled = true;
+    for(let i=0;i<26;i++){
+        document.getElementsByClassName("letterButton")[i].disabled = true;
+    }
+}
+//make new word, and enable every button again
+function restartBoard(){
+
+}
+
