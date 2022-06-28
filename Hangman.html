@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="Hangman.css">
 
     </head>
-<body>
+<body onload="showPosition()">
 
     <div class="gameBoard">
         <span id="bottomLine"></span>
@@ -52,33 +52,33 @@
             <span id="horizontalLineInGuess" style="top:10px;"></span>
             <span id="horizontalLineInGuess" style="top:340px;"></span>
             <div class="guessButtonsPanel">
-                <button type="button" class="letterButton" id="aButton">a</button>
-                <button type="button" class="letterButton" id="bButton">b</button> 
-                <button type="button" class="letterButton" id="cButton">c</button>
-                <button type="button" class="letterButton" id="dButton">d</button> 
-                <button type="button" class="letterButton" id="eButton">e</button>
-                <button type="button" class="letterButton" id="fButton">f</button>
-                <button type="button" class="letterButton" id="gButton">g</button>
-                <button type="button" class="letterButton" id="hButton">h</button>
-                <button type="button" class="letterButton" id="iButton">i</button>
-                <button type="button" class="letterButton" id="jButton">j</button>
+                <button type="button" class="letterButton" id="aButton" onclick="touchLetterButton(this)">a</button>
+                <button type="button" class="letterButton" id="bButton" onclick="touchLetterButton(this)">b</button> 
+                <button type="button" class="letterButton" id="cButton" onclick="touchLetterButton(this)">c</button>
+                <button type="button" class="letterButton" id="dButton" onclick="touchLetterButton(this)">d</button> 
+                <button type="button" class="letterButton" id="eButton" onclick="touchLetterButton(this)">e</button>
+                <button type="button" class="letterButton" id="fButton" onclick="touchLetterButton(this)">f</button>
+                <button type="button" class="letterButton" id="gButton" onclick="touchLetterButton(this)">g</button>
+                <button type="button" class="letterButton" id="hButton" onclick="touchLetterButton(this)">h</button>
+                <button type="button" class="letterButton" id="iButton" onclick="touchLetterButton(this)">i</button>
+                <button type="button" class="letterButton" id="jButton" onclick="touchLetterButton(this)">j</button>
 
-                <button type="button" class="letterButton" id="kButton" style="margin-left:30px;">k</button>
-                <button type="button" class="letterButton" id="lButton" style="margin-left:20px;">l</button>
-                <button type="button" class="letterButton" id="mButton" style="margin-left:20px;">m</button>
-                <button type="button" class="letterButton" id="nButton" style="margin-left:20px;">n</button>
-                <button type="button" class="letterButton" id="oButton" style="margin-left:30px;">o</button>
-                <button type="button" class="letterButton" id="pButton" style="margin-left:20px;">p</button>
-                <button type="button" class="letterButton" id="qButton" style="margin-left:20px;">q</button>
-                <button type="button" class="letterButton" id="rButton" style="margin-left:20px;">r</button>
-                <button type="button" class="letterButton" id="sButton" style="margin-left:30px;">s</button>
-                <button type="button" class="letterButton" id="tButton" style="margin-left:20px;">t</button>
-                <button type="button" class="letterButton" id="uButton" style="margin-left:20px;">u</button>
-                <button type="button" class="letterButton" id="vButton" style="margin-left:20px;">v</button>
-                <button type="button" class="letterButton" id="wButton" style="margin-left:30px;">w</button>
-                <button type="button" class="letterButton" id="xButton" style="margin-left:20px;">x</button>
-                <button type="button" class="letterButton" id="yButton" style="margin-left:20px;">y</button>
-                <button type="button" class="letterButton" id="zButton" style="margin-left:20px;">z</button>
+                <button type="button" class="letterButton" id="kButton" onclick="touchLetterButton(this)"style="margin-left:30px;" >k</button>
+                <button type="button" class="letterButton" id="lButton" onclick="touchLetterButton(this)"style="margin-left:20px;">l</button>
+                <button type="button" class="letterButton" id="mButton" onclick="touchLetterButton(this)"style="margin-left:20px;">m</button>
+                <button type="button" class="letterButton" id="nButton" onclick="touchLetterButton(this)"style="margin-left:20px;">n</button>
+                <button type="button" class="letterButton" id="oButton" onclick="touchLetterButton(this)"style="margin-left:30px;">o</button>
+                <button type="button" class="letterButton" id="pButton" onclick="touchLetterButton(this)"style="margin-left:20px;">p</button>
+                <button type="button" class="letterButton" id="qButton" onclick="touchLetterButton(this)"style="margin-left:20px;">q</button>
+                <button type="button" class="letterButton" id="rButton" onclick="touchLetterButton(this)"style="margin-left:20px;">r</button>
+                <button type="button" class="letterButton" id="sButton" onclick="touchLetterButton(this)"style="margin-left:30px;">s</button>
+                <button type="button" class="letterButton" id="tButton" onclick="touchLetterButton(this)"style="margin-left:20px;">t</button>
+                <button type="button" class="letterButton" id="uButton" onclick="touchLetterButton(this)"style="margin-left:20px;">u</button>
+                <button type="button" class="letterButton" id="vButton" onclick="touchLetterButton(this)"style="margin-left:20px;">v</button>
+                <button type="button" class="letterButton" id="wButton" onclick="touchLetterButton(this)"style="margin-left:30px;">w</button>
+                <button type="button" class="letterButton" id="xButton" onclick="touchLetterButton(this)"style="margin-left:20px;">x</button>
+                <button type="button" class="letterButton" id="yButton" onclick="touchLetterButton(this)"style="margin-left:20px;">y</button>
+                <button type="button" class="letterButton" id="zButton" onclick="touchLetterButton(this)"style="margin-left:20px;">z</button>
                 
             </div>
             <div class="guessWordPanel">
@@ -93,6 +93,6 @@
         
         
     </div>
-
+    <script src="hangman.js"></script>
 </body>
 </html>

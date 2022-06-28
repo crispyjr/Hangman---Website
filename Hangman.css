@@ -138,6 +138,7 @@ border-width: 2px;
     line-height: 40px;
     font-size: 30px;
     font-family:'Courier New', Courier, monospace;
+    visibility:hidden;
 }
 
 #gapLine{
@@ -209,6 +210,9 @@ border-width: 2px;
     background-color: antiquewhite;
     font-family:cursive;
 }
+#guessButton:hover{
+    background-color: rgb(255, 255, 255);
+}
 .guessButtonsPanel{
     margin-top: 20px;
     width:100%;
@@ -226,9 +230,18 @@ border-width: 2px;
     border-style: solid;
     border-color: black;
     text-transform: capitalize;
-    background-color: white;
+    background-color: rgb(237, 237, 237);
     font-family: cursive;
     font-size: large;
+    
+}
+.letterButton:hover{
+    background-color: white;
+}
+.letterButton:disabled{
+    background-color: black;
+    border-color: white;
+    color: white;
 }
 #horizontalLineInGuess{
     width: 100%;
