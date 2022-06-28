@@ -24,32 +24,66 @@
 //pos 1,2,3,4,5,6 and 8,9
 //basically if there is enough space, they both can be on top. 
 
-let tempword = "fruit";
+let tempword = "responssse";
 const wordSplit = tempword.split("");
 let position = document.getElementsByClassName("lineBox")[3];
-
+let startPosition= 0;
 function showPosition(){
-    if(tempword.length=5){
-        for(let i=2 ;i<7;i++){
-            document.getElementsByClassName("lineBox")[i].style.visibility="visible";
-
-        }
+    if(tempword.length==5){
+        startPosition=2;
         //document.getElementsByClassName("lineBox")[3].style.visibility="visible";
+        console.log("hit 5");
     }
+    else if(tempword.length==6){
+        startPosition=2;
+        console.log("hit 6");
+
+    }
+    else if(tempword.length==7){
+        startPosition=1;
+        console.log("hit 7");
+
+    }
+    else if(tempword.length==8){
+        startPosition=0;
+        console.log("hit 8");
+    }
+    else if(tempword.length==9){
+        startPosition=0;
+        console.log("hit 9");
+
+    }else if(tempword.length==10){
+        startPosition=0;
+        console.log("hit 10");
+    }
+    else{
+        startPosition=0;
+    }
+    console.log(startPosition);
+    showLines(startPosition);
+
     
+}
+
+function showLines(n){
+    for(let i=n;i<tempword.length+n;i++){
+        document.getElementsByClassName("lineBox")[i].style.visibility="visible";
+    }
 }
 
 //for when u click on a letter button
 function touchLetterButton(x){
     x.disabled = true;
     checkLetter(x);
-    position.innerText += x.innerText;
 }
 
 //check if the letter is there
 function checkLetter(x){
-    if(x.innerText.toUpperCase() == wordSplit[0].toUpperCase()){
-        document.getElementsByClassName("lineBox")[2].innerText = wordSplit[0];
+    for(let i=0;i<tempword.length;i++){
+        if(x.innerText.toUpperCase() == wordSplit[i].toUpperCase()){
+        document.getElementsByClassName("lineBox")[startPosition+i].innerText = wordSplit[i];
     }
+    }
+    
     console.log(x.innerText.toUpperCase() == wordSplit[0].toUpperCase());
 }
