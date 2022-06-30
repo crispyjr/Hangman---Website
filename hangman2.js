@@ -18,10 +18,17 @@ function checkHowManyWords(){
 
 //if correct word is only one word
 function oneWord(){
-
+    
 }
 //if correct word is only two words
 function twoWords(){
 
+
+}
+
+function topLine(){
+
+}
+function bottomLine(){
 
 }
