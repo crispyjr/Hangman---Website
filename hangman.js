@@ -24,12 +24,39 @@
 //pos 1,2,3,4,5,6 and 8,9
 //basically if there is enough space, they both can be on top. 
 
-let tempword = "pool";
+let tempword = "hotdogs";
 const wordSplit = tempword.split("");
 let position = document.getElementsByClassName("lineBox")[3];
 let startPosition= 0;
 let wrongCounter = 0;
+let correctCounter = 0;
+let hhhh = "hello";
+const h = hhhh.split(" ");
+let correctWord = "hello";
+const wordList = correctWord.split(" ");
 
+
+function checkHowManyWords(){
+
+    //if one word
+    if(wordList.length==1){
+        oneWord();
+    }
+    else if(wordList.length==2){
+        twoWords();
+    }
+    //else if two words
+}
+
+//if correct word is only one word
+function oneWord(){
+
+}
+//if correct word is only two words
+function twoWords(){
+
+
+}
 
 function showPosition(){
     if(tempword.length==4){
@@ -68,7 +95,7 @@ function showPosition(){
     }
     //console.log(startPosition);
     showLines(startPosition);
-
+    console.log(h);
     
 }
 
@@ -92,10 +119,14 @@ function checkLetter(x){
         if(x.innerText.toUpperCase() == wordSplit[i].toUpperCase()){
             correct=true;
             document.getElementsByClassName("lineBox")[startPosition+i].innerText = wordSplit[i];
+            correctCounter++;
         }
     }
     if(correct!=true){
         showBodyParts();
+    }
+    if(correctCounter>=tempword.length){
+        roundOver();
     }
     //console.log(x.innerText.toUpperCase() == wordSplit[0].toUpperCase());
 }
@@ -135,6 +166,7 @@ function roundOver(){
     for(let i=0;i<26;i++){
         document.getElementsByClassName("letterButton")[i].disabled = true;
     }
+    showAllLetters();
 }
 //make new word, and enable every button again
 function restartBoard(){
