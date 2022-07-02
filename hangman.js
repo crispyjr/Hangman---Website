@@ -24,17 +24,12 @@
 //pos 1,2,3,4,5,6 and 8,9
 //basically if there is enough space, they both can be on top. 
 
-let tempword = "hotdogs";
+let tempword = "dddddddddddddddd";
 const wordSplit = tempword.split("");
 let position = document.getElementsByClassName("lineBox")[3];
 let startPosition= 0;
 let wrongCounter = 0;
 let correctCounter = 0;
-let hhhh = "hello";
-const h = hhhh.split(" ");
-let correctWord = "hello";
-const wordList = correctWord.split(" ");
-
 
 
 function showPosition(){
