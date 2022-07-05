@@ -6,7 +6,7 @@ let correctCounter = 0;
 
 //============SETTING UP LINES================//
 function init(){
-    word = "bubble gum ffffffffff";
+    word = "Grandpa Clock";
     wordList = word.split(" ");
     setWord();
 }
