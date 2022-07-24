@@ -3,12 +3,31 @@ let wordList = word.split(" ");
 const positions = [0,0,0];
 let wrongCounter = 0;
 let correctCounter = 0;
+let timer = 5;
 
+
+
+function decreaseTime(){
+    var x = setInterval(function() {
+        let g = document.getElementById("timer");
+        g.innerHTML=g.innerHTML-1;
+        timer--;
+        console.log("aahahhsidcasifc")
+        if(timer<=0){
+            console.log("moo");
+            clearInterval(x);
+            roundOver();
+        }
+    },1000);
+    
+}
 //============SETTING UP LINES================//
 function init(){
     word = "Grandpa Clock";
     wordList = word.split(" ");
     setWord();
+    decreaseTime();
+    
 }
 
 function setWord(){
@@ -229,5 +248,6 @@ function roundOver(){
     }
     showAllLetters();
 }
+
 
 

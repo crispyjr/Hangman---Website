@@ -154,6 +154,12 @@ border-width: 2px;
     position: relative;
     background-color: beige;
 }
+#timer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    position: absolute;
+}
 /*==============================================GUESS BOARD / PLAYER BOARD=========================================================*/
 .guessBoard{
     width:300px;
