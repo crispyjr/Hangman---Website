@@ -27,7 +27,7 @@ function decreaseTime(){
         else if(timer<=10){
             g.style.backgroundColor="Red";
         }
-    },1000);
+    },100);
     
 }
 //============SETTING UP LINES================//
@@ -254,25 +254,49 @@ function roundOver(){
         document.getElementsByClassName("letterButton")[i].disabled = true;
     }
     showAllLetters();
-    startNewRound();
-    }
+    var h = setTimeout(function() {
+        inBetweenRound(document.getElementById("gameBoard"))
+    },5000);
+}
 
 
-function inBetweenRound(){
+function inBetweenRound(element){
     //show different div where points are collected
     //organize it by who completed it the fastest
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.visibility = 'hidden';
+        }
+        element.style.opacity = op;
+        console.log(op)
+        //element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+    startNewRound();
+    
+    //startNewRound();
     
 }
+
 function startNewRound(){
     //basically make all the letters show up again
     //show the new word
-    var g = setInterval(function() {
+    let t = 0;
+    var g = setTimeout(function(){
+        console.log("hello");
+        fade(document.getElementById("gameBoard"));
         for(let i=0;i<20;i++){
             document.getElementsByClassName("lineBox")[i].innerText = "";
             document.getElementsByClassName("lineBox")[i].style.visibility="hidden";
         }
         for(let i=0;i<26;i++){
             document.getElementsByClassName("letterButton")[i].disabled = false;
+        }
+        for(let i=0;i<6;i++){
+        document.getElementsByClassName("body")[i].style.visibility = "hidden";
+            
         }
         let f = document.getElementById("timer");
         f.innerHTML=30;
@@ -281,11 +305,26 @@ function startNewRound(){
         word = words[++wordsCurrentPos];
         wordList = word.split(" ");
         setWord();
-        decreaseTime();
-        clearInterval(g);
+       // decreaseTime();
 
-    },5000)
+    },5000);
+    console.log("new round start");
+    
 }
 
-
+function fade(element) {
+    element.style.visibility = 'visible';
+    
+    var op = 0.1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+            decreaseTime();
+            
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 50);
+}
 

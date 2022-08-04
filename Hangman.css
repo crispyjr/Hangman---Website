@@ -5,7 +5,7 @@ body {
 }
 /*==============================================GAME BOARD=========================================================*/
 
-.gameBoard{
+#gameBoard{
     width: 400px;
     height: 400px;
     background-color: antiquewhite;
@@ -15,6 +15,7 @@ body {
     border-right: 2px;
     border-right-style: solid;
     border-color: black;
+    
 }
 
 
@@ -164,6 +165,88 @@ border-width: 2px;
 }
 
 /*==============================================SCORE BOARD=========================================================*/
+#scoreBoard{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    margin-left: 298px;
+    margin-top: 100px;
+    position: absolute;
+    border-right: 2px;
+    border-right-style: solid;
+    border-color: black;
+    
+    
+}
+
+#scoreText{
+    position: absolute;
+    width:100%;
+    font-size: 75px;
+    color: antiquewhite;
+    
+    font-family: Century Gothic;
+    text-align: center;
+}
+
+#scorePanel{
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    
+    margin-top: 100px;
+    margin-left: 35px;
+}
+
+.scoreSlot{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:60px;
+    background-color: antiquewhite;
+    border-bottom: 20px;
+    border-bottom-style: solid;
+    border-color: black;
+}
+
+.scorePosition{
+    position: absolute;
+    width:30px;
+    height:30px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+.scoreName{
+    position: absolute;
+    width:240px;
+    height:30px;
+    line-height: 40px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 30px;
+    
+
+}
+.scoreNumber{
+    position: absolute;
+    width:70px;
+    height:30px;
+    line-height: 40px;
+    font-size: 30px;
+    margin-top: 10px;
+    right: 3px;
+    text-align: right;
+}
+#verticalLineinScore{
+    background-color: antiquewhite;
+    height:100%;
+    width:10px;
+    position: absolute;
+}
 
 
 /*==============================================GUESS BOARD / PLAYER BOARD=========================================================*/
