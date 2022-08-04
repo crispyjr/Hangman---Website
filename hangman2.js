@@ -1,9 +1,12 @@
+const words = ["apple and jeans", "today is monday", "ice cream", "basketball"]
+let wordsCurrentPos = 0;
 let word = " ";
 let wordList = word.split(" ");
 const positions = [0,0,0];
 let wrongCounter = 0;
 let correctCounter = 0;
-let timer = 5;
+let timer = 30;
+let timerwidth = 100;
 
 
 
@@ -12,18 +15,24 @@ function decreaseTime(){
         let g = document.getElementById("timer");
         g.innerHTML=g.innerHTML-1;
         timer--;
+        timerwidth -=3.33;
+        g.style.width = timerwidth+"%";
         console.log("aahahhsidcasifc")
         if(timer<=0){
             console.log("moo");
             clearInterval(x);
             roundOver();
+            g.style.width = 0 + "%";
+        }
+        else if(timer<=10){
+            g.style.backgroundColor="Red";
         }
     },1000);
     
 }
 //============SETTING UP LINES================//
 function init(){
-    word = "Grandpa Clock";
+    word = words[0];
     wordList = word.split(" ");
     setWord();
     decreaseTime();
@@ -165,9 +174,7 @@ function splitMethod(o,t,w,m,u){
 //show the lines
 function showLines(){
     console.log("touch show lines");
-    console.log(positions[0]);
-    console.log(positions[1]);
-    console.log(positions[2]);
+    
    for(let i=0;i<wordList.length;i++){
     for(let j=positions[i];j<wordList[i].length+positions[i];j++){
         document.getElementsByClassName("lineBox")[j].style.visibility="visible";
@@ -247,6 +254,37 @@ function roundOver(){
         document.getElementsByClassName("letterButton")[i].disabled = true;
     }
     showAllLetters();
+    startNewRound();
+    }
+
+
+function inBetweenRound(){
+    //show different div where points are collected
+    //organize it by who completed it the fastest
+    
+}
+function startNewRound(){
+    //basically make all the letters show up again
+    //show the new word
+    var g = setInterval(function() {
+        for(let i=0;i<20;i++){
+            document.getElementsByClassName("lineBox")[i].innerText = "";
+            document.getElementsByClassName("lineBox")[i].style.visibility="hidden";
+        }
+        for(let i=0;i<26;i++){
+            document.getElementsByClassName("letterButton")[i].disabled = false;
+        }
+        let f = document.getElementById("timer");
+        f.innerHTML=30;
+        timer = 30;
+        timerwidth=100;
+        word = words[++wordsCurrentPos];
+        wordList = word.split(" ");
+        setWord();
+        decreaseTime();
+        clearInterval(g);
+
+    },5000)
 }
 
 

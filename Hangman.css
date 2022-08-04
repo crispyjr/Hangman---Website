@@ -155,11 +155,17 @@ border-width: 2px;
     background-color: beige;
 }
 #timer{
-    margin-top: 10px;
-    margin-left: 20px;
+    width:100%;
+    height:20px;
+    background-color: black;
+    margin-top: 0px;
     font-size: 30px;
     position: absolute;
 }
+
+/*==============================================SCORE BOARD=========================================================*/
+
+
 /*==============================================GUESS BOARD / PLAYER BOARD=========================================================*/
 .guessBoard{
     width:300px;
